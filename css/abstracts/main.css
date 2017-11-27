@@ -1,0 +1,339 @@
+/* USAGE
+.button {
+  @include border-radius(5px);
+}
+
+.submit-button {
+  @include border-top-radius(10px);
+  @include border-right-radius(8px);
+  @include border-bottom-radius(10px);
+  @include border-left-radius (6px);
+}
+*/
+/*@import "../layout/grid"; */
+:root {
+  font-size: 24px; }
+  @media (min-width: 725px) {
+    :root {
+      font-size: 16px; } }
+
+*, *::before,
+*::after {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box; }
+
+* {
+  margin: 0;
+  padding: 0; }
+
+body, html {
+  height: 100%; }
+
+h1, h2, h3, h4, h5, h6, a, p {
+  font-family: 'Nunito', sans-serif; }
+
+h1 {
+  font-size: 3rem;
+  font-weight: 300;
+  letter-spacing: 1.2px; }
+
+h2.title {
+  font-size: 2rem;
+  font-weight: 300;
+  opacity: 1;
+  margin: 2em, 1em, 2em, 1em; }
+
+h2.rotate {
+  font-size: 2rem;
+  font-weight: 300;
+  letter-spacing: 1.5px;
+  opacity: 1; }
+
+p {
+  line-height: 1.5;
+  font-size: 1rem; }
+
+a {
+  font-size: 1.5rem;
+  font-weight: 300; }
+
+.rotate {
+  /* Safari */
+  /*  position: relative;
+  text-align: left;
+  right: 700px;
+  -webkit-transform: rotate(-90deg);
+*/
+  -webkit-writing-mode: vertical-lr;
+  -ms-writing-mode: tb-lr;
+  writing-mode: vertical-lr;
+  /* Firefox */
+  -moz-transform: rotate(-90deg);
+  /* IE */
+  -ms-transform: rotate(-90deg);
+  /* Opera */
+  -o-transform: rotate(-90deg); }
+
+/*==================================================
+ * GRID PRACTICE
+ * ===============================================*/
+/*
+.wrapper {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-auto-rows: 100px;
+  grid-column-gap: 10px;
+  grid-row-gap: 1em;
+}
+
+.box1 {
+  grid-column-start: 1;
+  grid-column-end: 4;
+  grid-row-start: 1;
+  grid-row-end: 3;
+}
+
+.box2 {
+  grid-column-start: 1;
+  grid-row-start: 3;
+  grid-row-end: 5;
+}
+
+.wrapper > div {
+  border: 2px solid #ffa94d;
+  border-radius: 5px;
+  background-color: #ffd8a8;
+  padding: 1em;
+  color: #d9480f;
+}
+*/
+/*==================================================
+ * FULLSCREEN BG
+ * ===============================================*/
+.bg {
+  padding: 0em 2em;
+  overflow: auto;
+  background: #0cebeb;
+  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #6bf3d8, #20e3b2, #0cebeb);
+  /* Chrome 10-25, Safari 5.1-6 */
+  background: -webkit-gradient(linear, left top, right top, from(#6bf3d8), color-stop(#20e3b2), to(#0cebeb));
+  background: -webkit-linear-gradient(left, #6bf3d8, #20e3b2, #0cebeb);
+  background: -o-linear-gradient(left, #6bf3d8, #20e3b2, #0cebeb);
+  background: linear-gradient(to right, #6bf3d8, #20e3b2, #0cebeb);
+  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  height: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover; }
+
+.landing-container {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  height: 90vh;
+  width: auto;
+  margin: .5em auto;
+  padding: 2em 10em 0em 2em;
+  background: #6952d2; }
+
+.title, .section-info {
+  color: #eff5ff; }
+
+.rotate {
+  color: #eff5ff;
+  padding-right: .5em; }
+
+.second-container {
+  height: auto;
+  width: 90%;
+  margin: 10vh auto;
+  padding: 2em;
+  background: #6952d2; }
+
+/*==================================================
+ * GRID PRACTICE TEST 2
+ * ===============================================*/
+/*
+.box1 {
+   grid-column-start: 1;
+   grid-column-end: 2;
+   grid-row-start: 1;
+   grid-row-end: 4;
+}
+* {box-sizing: border-box;}
+
+.wrapper {
+    border: 2px solid #f76707;
+    border-radius: 5px;
+    background-color: #fff4e6;
+     display: grid;
+     grid-template-columns: repeat(3, 1fr);
+     grid-template-rows: repeat(3, 100px);
+}
+
+.wrapper > div {
+    border: 2px solid #ffa94d;
+    border-radius: 5px;
+    background-color: #ffd8a8;
+    padding: 1em;
+    color: #d9480f;
+
+
+}
+.box2 {
+   grid-column-start: 3;
+   grid-column-end: 4;
+   grid-row-start: 1;
+   grid-row-end: 3;
+}
+.box3 {
+   grid-column-start: 2;
+   grid-column-end: 3;
+   grid-row-start: 1;
+   grid-row-end: 2;
+}
+.box4 {
+   grid-column-start: 2;
+   grid-column-end: 4;
+   grid-row-start: 3;
+   grid-row-end: 4;
+}
+*/
+.main-nav {
+  background: #6952d2;
+  margin: 0;
+  padding: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 100%;
+  overflow: hidden;
+  -webkit-transition: all ease-in-out 1000ms;
+  -o-transition: all ease-in-out 1000ms;
+  transition: all ease-in-out 1000ms; }
+  @media (min-width: 725px) {
+    .main-nav {
+      margin-top: 1.5em;
+      background: none;
+      position: relative;
+      -webkit-box-flex: 1;
+      -webkit-flex: auto;
+      -ms-flex: auto;
+      flex: auto;
+      left: 0; } }
+  .main-nav ul {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    text-align: center;
+    -webkit-justify-content: space-around;
+    -ms-flex-pack: distribute;
+    justify-content: space-around;
+    height: 100vh; }
+    @media (min-width: 725px) {
+      .main-nav ul {
+        -webkit-box-orient: horizontal;
+        -webkit-box-direction: normal;
+        -webkit-flex-direction: row;
+        -ms-flex-direction: row;
+        flex-direction: row;
+        height: auto; } }
+  .main-nav li {
+    -webkit-box-flex: 1;
+    -webkit-flex: 1 1 auto;
+    -ms-flex: 1 1 auto;
+    flex: 1 1 auto;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.25);
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex; }
+    @media (min-width: 725px) {
+      .main-nav li {
+        display: inline-block;
+        border: none;
+        text-align: right; } }
+  .main-nav a {
+    -webkit-flex-basis: 100%;
+    -ms-flex-preferred-size: 100%;
+    flex-basis: 100%;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center; }
+    @media (min-width: 725px) {
+      .main-nav a {
+        -webkit-flex-basis: auto;
+        -ms-flex-preferred-size: auto;
+        flex-basis: auto;
+        display: inline; } }
+    .main-nav a:hover {
+      background: rgba(0, 0, 0, 0.1); }
+      @media (min-width: 725px) {
+        .main-nav a:hover {
+          background-color: none;
+          color: #eff5ff, 15%; } }
+  .main-nav a:link {
+    text-decoration: none;
+    color: #eff5ff; }
+  .main-nav a:visited {
+    text-decoration: none; }
+  .main-nav.is-open {
+    bottom: 0; }
+
+.nav-toggle {
+  display: block;
+  padding: 0em;
+  position: absolute;
+  right: 3em;
+  top: 3em;
+  cursor: pointer; }
+  @media (min-width: 725px) {
+    .nav-toggle {
+      display: none; } }
+  .nav-toggle .hamburger,
+  .nav-toggle .hamburger::after,
+  .nav-toggle .hamburger::before {
+    content: '';
+    display: block;
+    width: 1em;
+    height: 3px;
+    background: #eff5ff;
+    -webkit-transition: all ease-in-out 250ms;
+    -o-transition: all ease-in-out 250ms;
+    transition: all ease-in-out 250ms; }
+  .nav-toggle .hamburger::before {
+    -webkit-transform: translateY(-6px);
+    -ms-transform: translateY(-6px);
+    transform: translateY(-6px); }
+  .nav-toggle .hamburger::after {
+    -webkit-transform: translateY(3px);
+    -ms-transform: translateY(3px);
+    transform: translateY(3px); }
+  .nav-toggle .hamburger.is-open {
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg); }
+    .nav-toggle .hamburger.is-open::after {
+      -webkit-transform: rotate(-90deg) translateX(3px);
+      -ms-transform: rotate(-90deg) translateX(3px);
+      transform: rotate(-90deg) translateX(3px); }
+    .nav-toggle .hamburger.is-open::before {
+      opacity: 0; }
