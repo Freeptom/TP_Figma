@@ -36,47 +36,24 @@
  * FULLSCREEN BG
  * ===============================================*/
 
-.bg{
-  padding: 0em 2em;
-  overflow:auto;
-  //  background-image:url(/img/blue_wires.jpg);
-  background: $main; /* fallback for old browsers */
-  background: -webkit-linear-gradient(to right, #6bf3d8, #20e3b2, #0cebeb); /* Chrome 10-25, Safari 5.1-6 */
-  background: linear-gradient(to right, #6bf3d8, #20e3b2, #0cebeb);
-  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-  height: 100%;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
+.sidebar {
+    background: $secondary;
+    flex: 1 1 20%;
+    min-width: 300px;
+    padding: 3em;
 }
 
-.landing-container {
 
-  display: flex;
-  height: 90vh;
-  width: auto;
-  margin: .5em auto;
-  padding: 2em 10em 0em 2em;
-  background: $secondary;
-
+.main-content{
+  padding: 10;
+  flex: 1 1 80%;
+  min-height: 100vh;
 }
-
 
 .title, .section-info {color: $text-inverse;}
 
-.rotate {color: $text-inverse;
-padding-right: .5em;
- }
-
-.second-container {
-  height: auto;
-  width: 90%;
-  margin: 10vh auto;
-  padding: 2em;
-  background: $secondary;
 
 
-}
 
 /*==================================================
  * GRID PRACTICE TEST 2

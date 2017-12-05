@@ -29,13 +29,27 @@
 body, html {
   height: 100%; }
 
+body {
+  background: #2CABF2;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap; }
+
 h1, h2, h3, h4, h5, h6, a, p {
   font-family: 'Nunito', sans-serif; }
 
 h1 {
+  color: #eff5ff;
   font-size: 3rem;
   font-weight: 300;
-  letter-spacing: 1.2px; }
+  letter-spacing: 1.5px;
+  display: inline; }
+  h1.bold {
+    font-weight: 400; }
 
 h2.title {
   font-size: 2rem;
@@ -110,47 +124,25 @@ a {
 /*==================================================
  * FULLSCREEN BG
  * ===============================================*/
-.bg {
-  padding: 0em 2em;
-  overflow: auto;
-  background: #0cebeb;
-  /* fallback for old browsers */
-  background: -webkit-linear-gradient(to right, #6bf3d8, #20e3b2, #0cebeb);
-  /* Chrome 10-25, Safari 5.1-6 */
-  background: -webkit-gradient(linear, left top, right top, from(#6bf3d8), color-stop(#20e3b2), to(#0cebeb));
-  background: -webkit-linear-gradient(left, #6bf3d8, #20e3b2, #0cebeb);
-  background: -o-linear-gradient(left, #6bf3d8, #20e3b2, #0cebeb);
-  background: linear-gradient(to right, #6bf3d8, #20e3b2, #0cebeb);
-  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-  height: 100%;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover; }
+.sidebar {
+  background: #6952d2;
+  -webkit-box-flex: 1;
+  -webkit-flex: 1 1 20%;
+  -ms-flex: 1 1 20%;
+  flex: 1 1 20%;
+  min-width: 300px;
+  padding: 3em; }
 
-.landing-container {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  height: 90vh;
-  width: auto;
-  margin: .5em auto;
-  padding: 2em 10em 0em 2em;
-  background: #6952d2; }
+.main-content {
+  padding: 10;
+  -webkit-box-flex: 1;
+  -webkit-flex: 1 1 80%;
+  -ms-flex: 1 1 80%;
+  flex: 1 1 80%;
+  min-height: 100vh; }
 
 .title, .section-info {
   color: #eff5ff; }
-
-.rotate {
-  color: #eff5ff;
-  padding-right: .5em; }
-
-.second-container {
-  height: auto;
-  width: 90%;
-  margin: 10vh auto;
-  padding: 2em;
-  background: #6952d2; }
 
 /*==================================================
  * GRID PRACTICE TEST 2
@@ -202,8 +194,6 @@ a {
 }
 */
 .main-nav {
-  background: #6952d2;
-  margin: 0;
   padding: 0;
   position: absolute;
   top: 0;
@@ -216,14 +206,12 @@ a {
   transition: all ease-in-out 1000ms; }
   @media (min-width: 725px) {
     .main-nav {
-      margin-top: 1.5em;
       background: none;
       position: relative;
       -webkit-box-flex: 1;
       -webkit-flex: auto;
       -ms-flex: auto;
-      flex: auto;
-      left: 0; } }
+      flex: auto; } }
   .main-nav ul {
     display: -webkit-box;
     display: -webkit-flex;

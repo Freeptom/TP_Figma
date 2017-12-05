@@ -1,6 +1,4 @@
 .main-nav {
-  background: $secondary;
-  margin: 0;
   padding: 0;
   position: absolute;
   top: 0;
@@ -10,11 +8,10 @@
   overflow: hidden;
 transition: all ease-in-out 1000ms;
 @media(min-width:725px) {
-  margin-top: 1.5em;
   background:none;
   position: relative;
   flex: auto;
-  left:0;
+
 }
 
   // ROTATE

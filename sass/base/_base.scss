@@ -16,3 +16,9 @@ body, html {
 height:100%;
 
 }
+
+body {
+  background: $main;
+  display: flex;
+  flex-wrap: wrap;
+}
