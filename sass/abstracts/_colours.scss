@@ -1,5 +1,6 @@
-$main: #2CABF2;
+$main: #1E1D2B;
 $secondary: #6952d2;
+$light: #6E6B80;
 $accent: rgba(211, 24, 105, 1);
 $white: #eff5ff;
 
@@ -8,5 +9,5 @@ $white: #eff5ff;
 $text-base: $secondary ;
 $text-inverse: $white ;
 $text-accent: $accent ;
-$text-secondary: $main ;
+$text-secondary: $light;
 $dark: #444;

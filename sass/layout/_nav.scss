@@ -1,15 +1,21 @@
 
+.main-nav {
+  grid-row: 1;
+  grid-column:2;
+}
+
+
 .unstyled-list ul {
 
   text-align: center;
   padding:0;
-    margin: 10em, 1em, 2em, 1em;
 }
 
 .unstyled-list li{
   display: inline-block;
 list-style:none;
   text-align: center;
+  margin: 20px;
 
 }
 
@@ -17,5 +23,6 @@ list-style:none;
 .unstyled-list a {
 text-decoration: none;
 display: block;
+color: $text-inverse;
 
 }
