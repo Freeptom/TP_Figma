@@ -11,12 +11,6 @@
 }
 */
 /*@import "../layout/grid"; */
-:root {
-  font-size: 24px; }
-  @media (min-width: 725px) {
-    :root {
-      font-size: 16px; } }
-
 * {
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
@@ -53,7 +47,22 @@ a {
   font-weight: 300; }
 
 body {
-  background: #1E1D2B; }
+  background: #1E1D2B;
+  font-size: 1em;
+  line-height: 1.5; }
+  @media (min-width: 64em) {
+    body {
+      font-size: 1.2em;
+      line-height: 1.8; } }
+  @media (min-width: 85.375em) {
+    body {
+      font-size: 1.3em; } }
+  @media (min-width: 120em) {
+    body {
+      font-size: 1.4em; } }
+  @media (min-width: 160em) {
+    body {
+      font-size: 1.6em; } }
 
 .header {
   padding: 2em;
