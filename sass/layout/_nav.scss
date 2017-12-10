@@ -1,28 +1,27 @@
-
 .main-nav {
   grid-row: 1;
-  grid-column:2;
+  grid-column: 2;
+  display: none;
+  margin: 0;
+  padding: 0;
+  @media screen and (min-width: 1025px) {
+    & {
+      display: inline;
+    }
+  }
 }
-
 
 .unstyled-list ul {
-
-  text-align: center;
-  padding:0;
+  padding: 0;
 }
 
-.unstyled-list li{
-  display: inline-block;
-list-style:none;
-  text-align: center;
-  margin: 20px;
-
+.unstyled-list li {
+  display: inline;
+  margin: 0 2rem;
+  list-style: none;
 }
-
 
 .unstyled-list a {
-text-decoration: none;
-display: block;
-color: $text-inverse;
-
+  text-decoration: none;
+  color: $text-base;
 }

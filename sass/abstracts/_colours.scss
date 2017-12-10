@@ -1,13 +1,11 @@
-$main: #1E1D2B;
+$main: #104AB6;
 $secondary: #6952d2;
 $light: #6E6B80;
 $accent: rgba(211, 24, 105, 1);
-$white: #eff5ff;
-
+$white: #FFFFFF;
 //text-colours
-
-$text-base: $secondary ;
-$text-inverse: $white ;
-$text-accent: $accent ;
+$text-base: $main;
+$text-inverse: $white;
+$text-accent: $accent;
 $text-secondary: $light;
 $dark: #444;

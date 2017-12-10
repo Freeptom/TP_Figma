@@ -1,44 +1,75 @@
-
-
-
-
-h1,h2,h3,h4,h5,h6, a, p {
+.portfolio-item,
+a,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
   font-family: 'Nunito', sans-serif;
+  // font-family: 'Cormorant Infant', serif;
+  color: $text-base;
 }
 
+.portfolio-item h1 {
+  font-size: 1rem;
+  font-weight: 600;
+  letter-spacing: 1.5px;
+  line-height: 1.5;
+  @media screen and (min-width: 40em) {
+    & {
+      font-size: 3rem;
+    }
+  }
+}
 
-h1.title
-{
-  color: $text-inverse;
+h1.title {
   text-transform: lowercase;
-font-size: 3rem;
+  font-size: 1.5rem;
   font-weight: 400;
   letter-spacing: 1.5px;
   word-spacing: -5px;
-display:inline;
-grid-column: 1;
-grid-row:1;
-
+  @media screen and (min-width: 600px) {
+    & {
+      font-size: 3rem;
+    }
+  }
 }
 
-h2.title {
+h2.sub-title {
+  grid-column: 1;
   color: $text-secondary;
   text-transform: uppercase;
-  font-size: 1rem;
- font-weight: 300;
- grid-column: 1;
+  font-size: 0.5rem;
+  font-weight: 300;
+  @media screen and (min-width: 40em) {
+    & {
+      font-size: 1rem;
+    }
+  }
 }
 
-
+.portfolio-item h2 {
+  font-size: 2rem;
+}
 
 p {
   line-height: 1.5;
-  font-size: 1rem;}
-
+  font-size: 1em;
+}
 
 a {
-
-  font-size: 1.5rem;
+  font-size: 1rem;
   font-weight: 300;
-
+  @media screen and (min-width: 1200px) {
+    & {
+      font-size: 1.2rem;
+    }
+  }
+  @media screen and (min-width: 1430px) {
+    & {
+      font-size: 1.5rem;
+    }
+  }
 }
