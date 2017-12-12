@@ -1,21 +1,29 @@
-.portfolio-item,
+
 a,
 h1,
+p
+ {
+font-family: 'Source Serif Pro', serif;
+letter-spacing: .75px;
+  // font-family: 'Nunito', sans-serif;
+  // font-family: 'Cormorant Infant', serif;
+  color: $text-base;
+}
+
 h2,
 h3,
 h4,
 h5,
-h6,
-p {
-  font-family: 'Nunito', sans-serif;
-  // font-family: 'Cormorant Infant', serif;
+h6,p {font-family: 'Source Sans Pro', sans-serif;
+  letter-spacing: 1.5px;
   color: $text-base;
+
 }
 
 .portfolio-item h1 {
   font-size: 1rem;
   font-weight: 600;
-  letter-spacing: 1.5px;
+
   line-height: 1.5;
   @media screen and (min-width: 40em) {
     & {
@@ -25,14 +33,13 @@ p {
 }
 
 h1.title {
-  text-transform: lowercase;
-  font-size: 1.5rem;
-  font-weight: 400;
+  font-size: 3rem;
+  font-weight: 800;
   letter-spacing: 1.5px;
   word-spacing: -5px;
   @media screen and (min-width: 600px) {
     & {
-      font-size: 3rem;
+      font-size: 8rem;
     }
   }
 }
@@ -56,7 +63,7 @@ h2.sub-title {
 
 p {
   line-height: 1.5;
-  font-size: 1em;
+  font-size: 1rem;
 }
 
 a {
