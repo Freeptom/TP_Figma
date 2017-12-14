@@ -21,12 +21,12 @@ html, body {
   height: 100%; }
 
 a, h1, p {
-  font-family: 'Source Serif Pro', serif;
+  font-family: 'Cabin', sans-serif;
   letter-spacing: .75px;
   color: #FFFFFF; }
 
 h2, h3, h4, h5, h6, p {
-  font-family: 'Source Sans Pro', sans-serif;
+  font-family: 'Source Sans Pr', sans-serif;
   letter-spacing: 1px;
   color: #104AB6; }
 
@@ -34,14 +34,19 @@ h1, h2, h3 {
   padding-top: 1rem;
   margin-bottom: .5em; }
 
-h1 {
+.portfolio-item h1 {
   padding: 1rem;
   background: pink;
-  font-size: 2rem; }
+  font-size: 2.5rem;
+  outline-color: pink;
+  outline-style: solid;
+  outline-width: 4px;
+  outline-offset: 2px; }
   @media screen and (min-width: 600px) {
-    h1 {
+    .portfolio-item h1 {
       font-size: 4rem;
-      padding: 1rem 2rem; } }
+      padding: 1rem 2rem;
+      margin-top: .1em; } }
 
 h2 {
   grid-column: 1;
