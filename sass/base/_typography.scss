@@ -1,64 +1,81 @@
+@font-face {
+font-family: "YoungSerif";
+src: url("../../fonts/YoungSerif-master/fonts/webfonts/YoungSerif-Regular.eot");
+src:
+url("../../fonts/YoungSerif-master/fonts/webfonts/YoungSerif-Regular.woff") format("woff"),
+url("../../fonts/YoungSerif-master/fonts/YoungSerif-Regular.otf") format("opentype"),
+}
 
+@font-face {
+font-family: "Lovelo Black";
+src: url("../../fonts/lovelo/Lovelo Black.otf");
+}
 
 
 a, h1, p
  {
-font-family: 'Cabin', sans-serif;
+font-family: 'Open Sans', sans-serif;
 
 letter-spacing: .75px;
-  color: $white;
+  color: $accent;
 }
 
-h2, h3, h4, h5, h6, p {
-  font-family: 'Source Sans Pr', sans-serif;
+h2, h3, h4, h5, h6,  {
+  font-family: 'Lovelo Black';
   letter-spacing: 1px;
   color: $text-base;
 }
 
-h1, h2, h3 {
-  padding-top: 1rem;
-  margin-bottom: .5em;
+p{
+  padding: 0 1em 0 4em;
+  font-family: 'YoungSerif';
+    line-height: 1.5;
+    font-size: 1rem;
+    margin-bottom: .75em;
+  }
+
+
+
+h1, .portfolio__title {
+  padding: 1em 2em;
+
 }
 
 
-.portfolio-item h1 {
-  padding: 1rem;
-  background: pink;
-  font-size: 2.5rem;
-outline-color: pink;
-outline-style: solid;
-outline-width: 4px;
-outline-offset: 2px;
+ .header__title {
+   font-family: 'Lovelo Black' sans-serif;
+   text-align: center;
+  padding:1rem;
+  font-size: 3rem;
   @media screen and (min-width: 600px) {
     & {
       font-size: 4rem;
       padding: 1rem 2rem;
-      margin-top: .1em;
+      margin-top: 1em;
     }
   }
 }
 
-h2 {
+.header__subtitle {
+   text-align: center;
   grid-column: 1;
   text-transform: uppercase;
-  font-size: 1.2rem;
+  font-size: 1rem;
   font-weight: 300;
+  margin-bottom: 4em;
   @media screen and (min-width: 600px) {
     & {
       font-size: 1rem;
+
     }
 }
 }
 
-h3 {
+.portfolio__title {
   font-size: 2rem;
 }
 
-p {
-  line-height: 1.5;
-  font-size: 1rem;
-  margin-bottom: .75em;
-}
+
 
 a {
   font-size: 1rem;

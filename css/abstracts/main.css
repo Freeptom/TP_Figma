@@ -20,50 +20,59 @@
 html, body {
   height: 100%; }
 
-a, h1, p {
-  font-family: 'Cabin', sans-serif;
-  letter-spacing: .75px;
-  color: #FFFFFF; }
+@font-face {
+  font-family: "YoungSerif";
+  src: url("../../fonts/YoungSerif-master/fonts/webfonts/YoungSerif-Regular.eot");
+  src: url("../../fonts/YoungSerif-master/fonts/webfonts/YoungSerif-Regular.woff") format("woff"), url("../../fonts/YoungSerif-master/fonts/YoungSerif-Regular.otf") format("opentype"); }
 
-h2, h3, h4, h5, h6, p {
-  font-family: 'Source Sans Pr', sans-serif;
+@font-face {
+  font-family: "Lovelo Black";
+  src: url("../../fonts/lovelo/Lovelo Black.otf"); }
+
+a, h1, p {
+  font-family: 'Open Sans', sans-serif;
+  letter-spacing: .75px;
+  color: #FB6B21; }
+
+h2, h3, h4, h5, h6 {
+  font-family: 'Lovelo Black';
   letter-spacing: 1px;
   color: #104AB6; }
 
-h1, h2, h3 {
-  padding-top: 1rem;
-  margin-bottom: .5em; }
-
-.portfolio-item h1 {
-  padding: 1rem;
-  background: pink;
-  font-size: 2.5rem;
-  outline-color: pink;
-  outline-style: solid;
-  outline-width: 4px;
-  outline-offset: 2px; }
-  @media screen and (min-width: 600px) {
-    .portfolio-item h1 {
-      font-size: 4rem;
-      padding: 1rem 2rem;
-      margin-top: .1em; } }
-
-h2 {
-  grid-column: 1;
-  text-transform: uppercase;
-  font-size: 1.2rem;
-  font-weight: 300; }
-  @media screen and (min-width: 600px) {
-    h2 {
-      font-size: 1rem; } }
-
-h3 {
-  font-size: 2rem; }
-
 p {
+  padding: 0 1em 0 4em;
+  font-family: 'YoungSerif';
   line-height: 1.5;
   font-size: 1rem;
   margin-bottom: .75em; }
+
+h1, .portfolio__title {
+  padding: 1em 2em; }
+
+.header__title {
+  font-family: 'Lovelo Black' sans-serif;
+  text-align: center;
+  padding: 1rem;
+  font-size: 3rem; }
+  @media screen and (min-width: 600px) {
+    .header__title {
+      font-size: 4rem;
+      padding: 1rem 2rem;
+      margin-top: 1em; } }
+
+.header__subtitle {
+  text-align: center;
+  grid-column: 1;
+  text-transform: uppercase;
+  font-size: 1rem;
+  font-weight: 300;
+  margin-bottom: 4em; }
+  @media screen and (min-width: 600px) {
+    .header__subtitle {
+      font-size: 1rem; } }
+
+.portfolio__title {
+  font-size: 2rem; }
 
 a {
   font-size: 1rem;
@@ -85,42 +94,26 @@ a {
   grid-gap: .2rem; }
   @media screen and (min-width: 40em) {
     .portfolio {
-      grid-template-columns: repeat(3, 1fr);
-      grid-template-rows: minmax(20em, auto); } }
+      grid-template-columns: repeat(1, 1fr);
+      grid-template-rows: minmax(10em, auto); } }
 
-.gem {
-  grid-column: 1;
-  grid-row: 2;
-  justify-self: center;
-  -webkit-align-self: center;
-  -ms-flex-item-align: center;
-  align-self: center; }
-
-.img-circle {
-  border-radius: 50%; }
-
-.long {
-  grid-row: 1; }
+.wide {
+  padding: 0 1rem;
+  background: #FFFFFF; }
   @media screen and (min-width: 40em) {
-    .long {
-      grid-row: 1; } }
+    .wide {
+      grid-column: span 2; } }
 
 .standard {
   padding: 0 1rem;
-  border: 3px solid pink;
+  -webkit-box-shadow: 0 0 15px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.15);
   background: #FFFFFF; }
 
 .centered {
   justify-self: center;
   border: 3px solid pink;
   background: #FFFFFF; }
-
-.wide {
-  padding: 0 1rem;
-  background: pink; }
-  @media screen and (min-width: 40em) {
-    .wide {
-      grid-column: span 2; } }
 
 .main-nav {
   grid-row: 1;
