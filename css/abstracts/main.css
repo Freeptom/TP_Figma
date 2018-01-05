@@ -29,6 +29,7 @@ html, body {
   font-family: "Lovelo Black";
   src: url("../../fonts/lovelo/Lovelo Black.otf"); }
 
+
 a,
 h1,
 p {
@@ -47,32 +48,31 @@ h6 {
   color: #104AB6; }
 
 .header__title {
+  background: #FFFFFF;
   font-family: 'Lovelo Black' sans-serif;
   text-align: center;
-  padding: 1rem;
   font-size: 2rem; }
   @media screen and (min-width: 600px) {
     .header__title {
-      font-size: 4rem;
-      padding: 1rem 2rem;
-      margin-top: 1em; } }
+      font-size: 6rem; } }
 
 .header__subtitle {
+  background: #FFFFFF;
   text-align: center;
   grid-column: 1;
   text-transform: uppercase;
   font-size: 0.75rem;
   font-weight: 300;
-  margin-bottom: 10em; }
+  padding: 1rem 0; }
   @media screen and (min-width: 600px) {
     .header__subtitle {
-      font-size: 1rem; } }
+      font-size: 2rem; } }
 
 .item__title {
   font-size: 1.5rem; }
   @media screen and (min-width: 600px) {
     .item__title {
-      font-size: 2rem; } }
+      font-size: 3rem; } }
 
 h2.logo {
   color: #FB6B21; }
@@ -84,7 +84,7 @@ p {
   margin-bottom: 0.75em; }
   @media screen and (min-width: 600px) {
     p {
-      font-size: 1.25rem; } }
+      font-size: 1.50rem; } }
 
 a {
   font-size: 1rem;
@@ -132,8 +132,6 @@ a {
 .contact {
   grid-area: contact;
   background-image: url("//unsplash.it/800/600");
-  background-color: #B8B8B8;
-  background-blend-mode: multiply;
   background-size: cover; }
 
 .work {

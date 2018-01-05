@@ -8,9 +8,11 @@
   src: url("../../fonts/lovelo/Lovelo Black.otf");
 }
 //************-Defining Font Faces-************//
+
+,
 a,
 h1,
-p, {
+p {
   font-family: 'Open Sans', sans-serif;
   letter-spacing: 0.75px;
   color: $accent;
@@ -27,39 +29,40 @@ h6 {
   color: $text-base;
 }
 //************-Header-************//
+
 .header__title {
+  background: $white;
   font-family: 'Lovelo Black' sans-serif;
   text-align: center;
-  padding: 1rem;
   font-size: 2rem;
   @media screen and (min-width: 600px) {
     & {
-      font-size: 4rem;
-      padding: 1rem 2rem;
-      margin-top: 1em;
+      font-size: 6rem;
     }
   }
 }
 
 .header__subtitle {
+  background: $white;
   text-align: center;
   grid-column: 1;
   text-transform: uppercase;
   font-size: 0.75rem;
   font-weight: 300;
-  margin-bottom: 10em;
+  padding: 1rem 0;
   @media screen and (min-width: 600px) {
     & {
-      font-size: 1rem;
+      font-size: 2rem;
     }
   }
 }
 //************-Items-************//
+
 .item__title {
   font-size: 1.5rem;
   @media screen and (min-width: 600px) {
     & {
-      font-size: 2rem;
+      font-size: 3rem;
     }
   }
 }
@@ -76,9 +79,9 @@ p {
   margin-bottom: 0.75em;
   @media screen and (min-width: 600px) {
     & {
-      font-size: 1.25rem;
+      font-size: 1.50rem;
     }
-}
+  }
 }
 
 a {

@@ -56,8 +56,6 @@ background-size: 100% 100%;
 .contact {
   grid-area: contact;
   background-image: url("//unsplash.it/800/600");
-  background-color: #B8B8B8;
-  background-blend-mode: multiply;
   background-size: cover;
 }
 
@@ -91,11 +89,19 @@ background-size: 100% 100%;
   }
 }
 
+// .text_container {
+//   background: $white;
+//   margin: 0 10em;
+// }
+
+
 .box {
+
   padding: 2rem 5rem;
   @media screen and (min-width: 500px) {
     & {
-      padding:  15rem 5rem;
+      padding: 15rem 5rem;
+
     }
 }
 }
