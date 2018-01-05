@@ -1,27 +1,34 @@
 .main-nav {
+  background-color: white;
+  position: fixed;
   grid-row: 1;
   grid-column: 2;
   display: none;
   margin: 0;
   padding: 0;
-  @media screen and (min-width: 1025px) {
+  top: 5.4%;
+left:66.45%;
+padding: 0 1rem;
+  @media screen and (min-width: 600px) {
     & {
-      display: inline;
+    display: block;
     }
   }
 }
 
 .unstyled-list ul {
   padding: 0;
+  margin: 0;
 }
 
 .unstyled-list li {
-  display: inline;
-  margin: 0 2rem;
+  display: inline-block;
+  margin: 0 1em;
   list-style: none;
+
 }
 
 .unstyled-list a {
   text-decoration: none;
-  color: $text-base;
+  color: $accent;
 }

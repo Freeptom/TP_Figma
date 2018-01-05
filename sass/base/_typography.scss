@@ -12,6 +12,7 @@
 ,
 a,
 h1,
+h2,
 p {
   font-family: 'Open Sans', sans-serif;
   letter-spacing: 0.75px;
@@ -19,7 +20,7 @@ p {
 }
 
 ,
-h2,
+
 h3,
 h4,
 h5,
@@ -70,6 +71,8 @@ h6 {
 
 h2.logo {
   color: $accent;
+  font-size: 1.5rem;
+  font-weight: 400;
 }
 
 p {
@@ -87,14 +90,9 @@ p {
 a {
   font-size: 1rem;
   font-weight: 300;
-  @media screen and (min-width: 1200px) {
+  @media screen and (min-width: 600px) {
     & {
       font-size: 1.2rem;
-    }
-  }
-  @media screen and (min-width: 1430px) {
-    & {
-      font-size: 1.5rem;
     }
   }
 }

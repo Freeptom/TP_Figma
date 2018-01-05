@@ -32,13 +32,13 @@ html, body {
 
 a,
 h1,
+h2,
 p {
   font-family: 'Open Sans', sans-serif;
   letter-spacing: 0.75px;
   color: #FB6B21; }
 
 
-h2,
 h3,
 h4,
 h5,
@@ -75,7 +75,9 @@ h6 {
       font-size: 3rem; } }
 
 h2.logo {
-  color: #FB6B21; }
+  color: #FB6B21;
+  font-size: 1.5rem;
+  font-weight: 400; }
 
 p {
   font-family: 'YoungSerif';
@@ -89,12 +91,9 @@ p {
 a {
   font-size: 1rem;
   font-weight: 300; }
-  @media screen and (min-width: 1200px) {
+  @media screen and (min-width: 600px) {
     a {
       font-size: 1.2rem; } }
-  @media screen and (min-width: 1430px) {
-    a {
-      font-size: 1.5rem; } }
 
 .header {
   grid-area: header;
@@ -113,7 +112,6 @@ a {
     .logo {
       display: block;
       grid-area: logo;
-      overflow: hidden;
       position: fixed;
       /* Set the navbar to fixed position */
       top: 2%;
@@ -149,12 +147,12 @@ a {
   @media screen and (min-width: 500px) {
     .portfolio {
       grid-template-columns: 2fr auto;
-      grid-template-areas: "header header" "blog contact" "work work"; } }
+      grid-template-areas: "main-nav main-nav" "header header" "blog contact" "work work"; } }
   @media only screen and (min-width: 600px) {
     .portfolio {
       grid-gap: 2px;
       grid-template-columns: 1fr auto 1fr;
-      grid-template-areas: "header header header" " blog contact contact" "work work work"; } }
+      grid-template-areas: "main-nav main-nav main-nav" "header header header" " blog contact contact" "work work work"; } }
 
 .box {
   padding: 2rem 5rem; }
@@ -167,26 +165,32 @@ a {
   padding: 10rem 7rem; }
 
 .main-nav {
+  background-color: white;
+  position: fixed;
   grid-row: 1;
   grid-column: 2;
   display: none;
   margin: 0;
-  padding: 0; }
-  @media screen and (min-width: 1025px) {
+  padding: 0;
+  top: 5.4%;
+  left: 66.45%;
+  padding: 0 1rem; }
+  @media screen and (min-width: 600px) {
     .main-nav {
-      display: inline; } }
+      display: block; } }
 
 .unstyled-list ul {
-  padding: 0; }
+  padding: 0;
+  margin: 0; }
 
 .unstyled-list li {
-  display: inline;
-  margin: 0 2rem;
+  display: inline-block;
+  margin: 0 1em;
   list-style: none; }
 
 .unstyled-list a {
   text-decoration: none;
-  color: #104AB6; }
+  color: #FB6B21; }
 
 .img-profile {
   border-radius: 999em;
