@@ -1,52 +1,37 @@
 @font-face {
-font-family: "YoungSerif";
-src: url("../../fonts/YoungSerif-master/fonts/webfonts/YoungSerif-Regular.eot");
-src:
-url("../../fonts/YoungSerif-master/fonts/webfonts/YoungSerif-Regular.woff") format("woff"),
-url("../../fonts/YoungSerif-master/fonts/YoungSerif-Regular.otf") format("opentype"),
+  font-family: "YoungSerif";
+  src: url("../../fonts/YoungSerif-master/fonts/webfonts/YoungSerif-Regular.eot");
+  src: url("../../fonts/YoungSerif-master/fonts/webfonts/YoungSerif-Regular.woff") format("woff"), url("../../fonts/YoungSerif-master/fonts/YoungSerif-Regular.otf") format("opentype"),;
 }
-
 @font-face {
-font-family: "Lovelo Black";
-src: url("../../fonts/lovelo/Lovelo Black.otf");
+  font-family: "Lovelo Black";
+  src: url("../../fonts/lovelo/Lovelo Black.otf");
 }
-
-
-a, h1, p
- {
-font-family: 'Open Sans', sans-serif;
-
-letter-spacing: .75px;
+//************-Defining Font Faces-************//
+a,
+h1,
+p, {
+  font-family: 'Open Sans', sans-serif;
+  letter-spacing: 0.75px;
   color: $accent;
 }
 
-h2, h3, h4, h5, h6,  {
+,
+h2,
+h3,
+h4,
+h5,
+h6 {
   font-family: 'Lovelo Black';
   letter-spacing: 1px;
   color: $text-base;
 }
-
-p{
-  padding: 0 1em 0 4em;
-  font-family: 'YoungSerif';
-    line-height: 1.5;
-    font-size: 1rem;
-    margin-bottom: .75em;
-  }
-
-
-
-h1, .portfolio__title {
-  padding: 1em 2em;
-
-}
-
-
- .header__title {
-   font-family: 'Lovelo Black' sans-serif;
-   text-align: center;
-  padding:1rem;
-  font-size: 3rem;
+//************-Header-************//
+.header__title {
+  font-family: 'Lovelo Black' sans-serif;
+  text-align: center;
+  padding: 1rem;
+  font-size: 2rem;
   @media screen and (min-width: 600px) {
     & {
       font-size: 4rem;
@@ -57,25 +42,44 @@ h1, .portfolio__title {
 }
 
 .header__subtitle {
-   text-align: center;
+  text-align: center;
   grid-column: 1;
   text-transform: uppercase;
-  font-size: 1rem;
+  font-size: 0.75rem;
   font-weight: 300;
-  margin-bottom: 4em;
+  margin-bottom: 10em;
   @media screen and (min-width: 600px) {
     & {
       font-size: 1rem;
+    }
+  }
+}
+//************-Items-************//
+.item__title {
+  font-size: 1.5rem;
+  @media screen and (min-width: 600px) {
+    & {
+      font-size: 2rem;
+    }
+  }
+}
+//************-Paras and Anchors-************//
 
+h2.logo {
+  color: $accent;
+}
+
+p {
+  font-family: 'YoungSerif';
+  line-height: 1.5;
+  font-size: 1rem;
+  margin-bottom: 0.75em;
+  @media screen and (min-width: 600px) {
+    & {
+      font-size: 1.25rem;
     }
 }
 }
-
-.portfolio__title {
-  font-size: 2rem;
-}
-
-
 
 a {
   font-size: 1rem;
