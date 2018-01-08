@@ -29,13 +29,12 @@ html, body {
   font-family: "Lovelo Black";
   src: url("../../fonts/lovelo/Lovelo Black.otf"); }
 
-
 a,
 h1,
 h2,
 p {
   font-family: 'Open Sans', sans-serif;
-  letter-spacing: 0.75px;
+  letter-spacing: .5px;
   color: #FB6B21; }
 
 
@@ -47,28 +46,26 @@ h6 {
   letter-spacing: 1px;
   color: #104AB6; }
 
-.header__title {
-  background: #FFFFFF;
-  font-family: 'Lovelo Black' sans-serif;
+h1.header__title {
   text-align: center;
   font-size: 2rem; }
   @media screen and (min-width: 600px) {
-    .header__title {
+    h1.header__title {
       font-size: 6rem; } }
 
-.header__subtitle {
-  background: #FFFFFF;
+h3.header__subtitle {
+  text-shadow: -2px 2px 0px #00e6e6;
   text-align: center;
   grid-column: 1;
   text-transform: uppercase;
   font-size: 0.75rem;
-  font-weight: 300;
-  padding: 1rem 0; }
+  font-weight: 300; }
   @media screen and (min-width: 600px) {
-    .header__subtitle {
+    h3.header__subtitle {
       font-size: 2rem; } }
 
 .item__title {
+  text-shadow: -2px 2px 0px #00e6e6;
   font-size: 1.5rem; }
   @media screen and (min-width: 600px) {
     .item__title {
@@ -104,7 +101,7 @@ a {
   height: 30vh; }
   @media screen and (min-width: 500px) {
     .header {
-      height: 100vh; } }
+      height: auto; } }
 
 .logo {
   display: none; }
@@ -153,6 +150,9 @@ a {
       grid-gap: 2px;
       grid-template-columns: 1fr auto 1fr;
       grid-template-areas: "main-nav main-nav main-nav" "header header header" " blog contact contact" "work work work"; } }
+
+.header__container {
+  margin: 2em 0; }
 
 .box {
   padding: 2rem 5rem; }
