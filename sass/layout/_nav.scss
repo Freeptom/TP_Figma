@@ -1,17 +1,30 @@
+.nav-container {
+   background: rgba(255,255,255,0.8);
+   display: none;
+   position: fixed;
+   height: 100px;
+   width: 100%;
+   @media screen and (min-width: 600px) {
+     & {
+       display: block;
+     }
+   }
+}
+
+
+
 .main-nav {
-  background-color: white;
+  top: 35px;
   position: fixed;
   grid-row: 1;
   grid-column: 2;
   display: none;
   margin: 0;
   padding: 0;
-  top: 5.4%;
-left:66.45%;
-padding: 0 1rem;
+  right:2%;
   @media screen and (min-width: 600px) {
     & {
-    display: block;
+      display: block;
     }
   }
 }
