@@ -192,12 +192,11 @@ a {
     background: #FB6B21;
     right: 0;
     top: 0;
-    height: 100%;
+    height: 400px;
     width: 200px; }
     .main-nav.is-open ul {
       margin-top: 50px;
-      margin-left: 20%;
-      margin-right: 20%; }
+      margin-left: 20%; }
     .main-nav.is-open li {
       display: block;
       padding-top: 30%; }
