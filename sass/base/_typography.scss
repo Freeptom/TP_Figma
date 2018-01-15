@@ -40,7 +40,7 @@ h1.header__title {
   font-size: 2rem;
   @media screen and (min-width: 600px) {
     & {
-      font-size: 6rem;
+      font-size: 4rem;
     }
   }
 }
@@ -53,11 +53,11 @@ h3.header__subtitle {
   text-align: center;
   grid-column: 1;
   text-transform: uppercase;
-  font-size: 0.75rem;
+  font-size: .75rem;
   font-weight: 300;
   @media screen and (min-width: 600px) {
     & {
-      font-size: 2rem;
+      font-size: 1.75rem;
     }
   }
 }

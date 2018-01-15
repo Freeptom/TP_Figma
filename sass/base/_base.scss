@@ -1,5 +1,6 @@
 // Font-Size
-$base-font-size: 1em;
+// $base-font-size: 2rem;
+
 
 * {
   box-sizing: border-box;
@@ -9,4 +10,11 @@ $base-font-size: 1em;
 
 html, body {
   height: 100%;
+  font-size: 20px;
+
+@media screen and (min-width: 600px) {
+  & {
+    font-size: 16px;
+  }
+}
 }
