@@ -193,15 +193,19 @@ a {
     right: 0;
     top: 0;
     height: 100%;
-    width: 200px; }
+    width: 200px;
+    border-left: 3px solid #FFFFFF; }
     .main-nav.is-open ul {
-      margin-top: 50px;
-      margin-left: 20%;
-      margin-right: 20%; }
-    .main-nav.is-open li {
+      padding-top: 30%;
+      width: 100%;
+      text-align: center; }
+    .main-nav.is-open .unstyled-list li {
       display: block;
-      padding-top: 30%; }
-      .main-nav.is-open li a {
+      width: 100%;
+      text-align: center;
+      padding-top: 30%;
+      margin: 0; }
+      .main-nav.is-open .unstyled-list li a {
         color: #FFFFFF; }
   @media screen and (min-width: 600px) {
     .main-nav {
@@ -221,11 +225,7 @@ a {
   color: #FB6B21; }
 
 .nav-toggle {
-  background: red;
   cursor: pointer; }
-  @media screen and (max-width: 600px) {
-    .nav-toggle {
-      display: block; } }
 
 .nav-toggle-button {
   display: none;
@@ -234,7 +234,7 @@ a {
   background-color: #111;
   border-radius: 5px;
   position: fixed;
-  right: 4.5em;
+  right: 85px;
   top: 2em;
   background-color: #FFFFFF; }
   .nav-toggle-button:before {
@@ -245,10 +245,11 @@ a {
     content: '';
     width: 100%;
     height: 3px;
-    background-color: #111;
     position: absolute;
     border-radius: 5px;
     background-color: #FFFFFF; }
+    .nav-toggle-button:after.is-open, .nav-toggle-button:before.is-open {
+      height: 100px; }
   @media screen and (max-width: 600px) {
     .nav-toggle-button {
       display: block; } }
