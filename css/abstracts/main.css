@@ -207,6 +207,10 @@ a {
       margin: 0; }
       .main-nav.is-open .unstyled-list li a {
         color: #FFFFFF; }
+        .main-nav.is-open .unstyled-list li a:hover {
+          text-decoration: underline; }
+        .main-nav.is-open .unstyled-list li a:active, .main-nav.is-open .unstyled-list li a:focus {
+          color: #6952d2; }
   @media screen and (min-width: 600px) {
     .main-nav {
       display: block; } }
@@ -226,6 +230,8 @@ a {
 
 .nav-toggle {
   cursor: pointer; }
+  .nav-toggle:focus {
+    color: #6952d2; }
 
 .nav-toggle-button {
   display: none;
@@ -237,17 +243,23 @@ a {
   right: 85px;
   top: 2em;
   background-color: #FFFFFF; }
+  .nav-toggle-button:focus {
+    background-color: #6952d2; }
   .nav-toggle-button:before {
-    top: 20px; }
+    top: 8px;
+    width: 25px; }
   .nav-toggle-button:after {
-    top: 10px; }
+    top: 16px;
+    width: 20px; }
   .nav-toggle-button:after, .nav-toggle-button:before {
     content: '';
-    width: 100%;
+    right: 0;
     height: 3px;
     position: absolute;
     border-radius: 5px;
     background-color: #FFFFFF; }
+    .nav-toggle-button:after:focus, .nav-toggle-button:before:focus {
+      background-color: #6952d2; }
     .nav-toggle-button:after.is-open, .nav-toggle-button:before.is-open {
       height: 100px; }
   @media screen and (max-width: 600px) {
