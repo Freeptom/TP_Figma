@@ -184,7 +184,10 @@ a {
   display: none;
   margin: 0;
   padding: 0;
-  right: 2%; }
+  right: 2%;
+  -webkit-transition: all ease-in-out 250ms;
+  -o-transition: all ease-in-out 250ms;
+  transition: all ease-in-out 250ms; }
   .main-nav.is-open {
     position: fixed;
     visibility: visible;
@@ -214,57 +217,47 @@ a {
   @media screen and (min-width: 600px) {
     .main-nav {
       display: block; } }
-
-.unstyled-list ul {
-  padding: 0;
-  margin: 0; }
-
-.unstyled-list li {
-  display: inline-block;
-  margin: 0 1em;
-  list-style: none; }
-
-.unstyled-list a {
-  text-decoration: none;
-  color: #FB6B21; }
+  .main-nav .unstyled-list ul {
+    padding: 0;
+    margin: 0; }
+  .main-nav .unstyled-list li {
+    display: inline-block;
+    margin: 0 1em;
+    list-style: none; }
+  .main-nav .unstyled-list a {
+    text-decoration: none;
+    color: #FB6B21; }
 
 .nav-toggle {
-  cursor: pointer; }
-  .nav-toggle:focus {
-    color: #6952d2; }
-
-.nav-toggle-button {
+  cursor: pointer;
   display: none;
-  width: 30px;
-  height: 3px;
-  background-color: #111;
-  border-radius: 5px;
-  position: fixed;
-  right: 85px;
-  top: 2em;
-  background-color: #FFFFFF; }
-  .nav-toggle-button:focus {
-    background-color: #6952d2; }
-  .nav-toggle-button:before {
-    top: 8px;
-    width: 25px; }
-  .nav-toggle-button:after {
-    top: 16px;
-    width: 20px; }
-  .nav-toggle-button:after, .nav-toggle-button:before {
-    content: '';
-    right: 0;
-    height: 3px;
-    position: absolute;
-    border-radius: 5px;
-    background-color: #FFFFFF; }
-    .nav-toggle-button:after:focus, .nav-toggle-button:before:focus {
-      background-color: #6952d2; }
-    .nav-toggle-button:after.is-open, .nav-toggle-button:before.is-open {
-      height: 100px; }
+  padding: 1em;
+  position: absolute;
+  right: 2em;
+  top: 1em; }
   @media screen and (max-width: 600px) {
-    .nav-toggle-button {
+    .nav-toggle {
       display: block; } }
+
+.hamburger, .hamburger::before, .hamburger::after {
+  content: '';
+  width: 1.5em;
+  height: 3px;
+  position: absolute;
+  border-radius: 5px;
+  background-color: #FFFFFF; }
+  .hamburger:focus, .hamburger::before:focus, .hamburger::after:focus {
+    background-color: #6952d2; }
+
+.hamburger::before {
+  -webkit-transform: translateY(-6px);
+  -ms-transform: translateY(-6px);
+  transform: translateY(-6px); }
+
+.hamburger::after {
+  -webkit-transform: translateY(6px);
+  -ms-transform: translateY(6px);
+  transform: translateY(6px); }
 
 .img-profile {
   border-radius: 999em;
