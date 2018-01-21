@@ -1,112 +1,199 @@
-.nav-container {
-  background: rgba(255,255,255,0.8);
-  visibility: hidden;
-  position: fixed;
-  height: 100px;
-  width: 100%;
-  @media screen and (min-width: 600px) {
-    visibility: visible;
-  }
-}
+// .nav-container {
+//   background: rgba(255,255,255,0.8);
+//   display: none;
+//   position: fixed;
+//   height:10%;
+//   width: 100%;
+//   @media screen and (min-width: 600px) {
+//     display: block;
+//   }
+// }
+//
+// .main-nav {
+//   //************- Full Screen Menu -************//
+//   // top: 35px;
+//   position: fixed;
+//   right: 0;
+//   left: 1;
+//
+//   .unstyled-list ul {
+//     padding: 0;
+//     margin: 0;
+//   }
+//
+//   .unstyled-list li {
+//     display: inline-block;
+//     margin: 0 1em;
+//     list-style: none;
+//   }
+//
+//   .unstyled-list a {
+//     text-decoration: none;
+//     color: $accent;
+//   }
+//   //************- Burger Menu Open -************//
+//   &.is-open {
+//     overflow: hidden;
+//     position: fixed;
+//     visibility: visible;
+//     display: block;
+//     background: $accent;
+//     left: 0;
+//     top:0;
+//     padding: 0;
+//     height: 100vh;
+//     border-left: 3px solid $white;
+//     transition: all ease-in-out 250ms;
+//
+//     ul {
+//       padding-top: 10%;
+//       width: 100%;
+//       text-align: center;
+//     }
+//
+//     .unstyled-list li {
+//       overflow: hidden;
+//       display: block;
+//       text-align: center;
+//       padding-top: 20%;
+//       margin: 0;
+//
+//       a {
+//         color: $white;
+//
+//         &:hover {
+//           text-decoration: underline;
+//         }
+//
+//         &:active,
+//         &:focus {
+//           color: $secondary;
+//         }
+//       }
+//     }
+//   }
+//   @media screen and (min-width: 600px) {
+//     display: block;
+//   }
+// }
+
+
 
 .main-nav {
-  top: 35px;
-  position: fixed;
-  grid-row: 1;
-  grid-column: 2;
-  display: none;
-  margin: 0;
-  padding: 0;
-  right: 2%;
   transition: all ease-in-out 250ms;
-  //************- Burger Menu Open -************//
+  background: $accent;
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 100%;
+  overflow: hidden;
+  @media(min-width: 600px) {
+    background: none;
+    left: 0;
+    flex: auto;
+    margin-top: 2em;
+    margin-left: 1em;
+    margin-right: 2em;
+  }
 
-  &.is-open {
-    position: fixed;
-    visibility: visible;
-    display: block;
-    background: $accent;
-    right: 0;
-    top: 0;
-    height: 100%;
-    width: 200px;
-    border-left: 3px solid $white;
-
-    ul {
-      padding-top: 30%;
-      width: 100%;
-      text-align: center;
+  ul {
+    border-left: $white solid 2px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    height: 100vh;
+    @media(min-width: 600px) {
+      border: none;
+      flex-direction: row;
+      height: auto;
     }
+  }
 
-    .unstyled-list li {
-      display: block;
-      width: 100%;
-      text-align: center;
-      padding-top: 30%;
-      margin: 0;
-      a {
-        color: $white;
+  li {
+    flex: 1 1 auto;
+    border-bottom: 1px solid rgba(0,0,0,.15);
+    display: flex;
+    @media(min-width: 600px) {
+      display: inline-block;
+      border: none;
+      text-align: right;
+    }
+  }
+
+  &:hover {
+    background: rgba(0,0,0,.10);
+    @media(min-width: 600px) {
+      background: none;
+    }
+  }
+
+  a {
+    color: $white;
+    text-decoration: none;
+    flex-basis: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    @media(min-width: 600px) {
+      justify-content: flex-end;
+
       &:hover {
-          text-decoration: underline;
-        }
-        &:active, &:focus {
-          color: $secondary;
-        }
+        display: inline;
+        color: $accent;
       }
     }
   }
-  @media screen and (min-width: 600px) {
-    display: block;
+
+  &.is-open {
+    position: fixed;
+    left: 40%;
   }
-
-
-.unstyled-list ul {
-  padding: 0;
-  margin: 0;
 }
-
-.unstyled-list li {
-  display: inline-block;
-  margin: 0 1em;
-  list-style: none;
-}
-
-.unstyled-list a {
-  text-decoration: none;
-  color: $accent;
-}
-}
-
-//************- Burger Menu -************//
+//************- Burger Menu Styling -************//
 
 .nav-toggle {
   cursor: pointer;
   display: none;
   padding: 1em;
-  position: absolute;
+  position: fixed;
   right: 2em;
   top: 1em;
-
-
-@media screen and (max-width: 600px) {
+  @media screen and (max-width: 600px) {
     display: block;
   }
 }
 
-.hamburger, .hamburger::before, .hamburger::after {
+.hamburger,
+.hamburger::after,
+.hamburger::before {
   &:focus {
-       background-color: $secondary;
-     }
-     content: '';
-     width: 1.5em;
-     height: 3px;
-     position: absolute;
-     border-radius: 5px;
-     background-color: $white;
+    background-color: $secondary;
+  }
+  content: '';
+  width: 1.5em;
+  height: 3px;
+  position: absolute;
+  border-radius: 5px;
+  background-color: $white;
+  transition: all ease-in-out 250ms;
 }
+
 .hamburger::before {
   transform: translateY(-6px);
 }
+
 .hamburger::after {
   transform: translateY(6px);
+}
+
+.hamburger.is-open {
+  transform: rotate(45deg);
+
+  &::after {
+    transform: rotate(-90deg);
+  }
+
+  &::before {
+    opacity: 0;
+  }
 }
