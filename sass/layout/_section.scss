@@ -2,19 +2,31 @@
   width: 100vw;
   display: grid;
   // grid-auto-rows: minmax(400px, auto);
-  grid-template-areas: "header" "blog" "contact" "work";
+  grid-template-areas:
+  "header"
+  "blog"
+  "contact"
+  "work";
 
   @media screen and (min-width: 500px) {
     & {
       grid-template-columns: 2fr auto;
-      grid-template-areas: "main-nav main-nav" "header header" "blog contact" "work work";
+      grid-template-areas:
+      "main-nav main-nav"
+      "header header"
+      "blog contact"
+      "work work";
     }
   }
   @media only screen and (min-width: 600px) {
     & {
 
-      grid-template-columns: 1fr auto 1fr;
-      grid-template-areas: "main-nav main-nav main-nav" "header header header" " blog contact contact" "work work work";
+      grid-template-columns: auto auto auto;
+      grid-template-areas:
+      "main-nav main-nav main-nav"
+      "header header header"
+      "blog blog contact"
+      "work work work";
     }
   }
 }
@@ -66,7 +78,7 @@
 
 .item {
   min-height: 500px;
-  padding: 10% 10%;
+  padding: 4em 3em;
 }
 
 .blog {

@@ -91,9 +91,9 @@
     background: none;
     left: 0;
     flex: auto;
-    margin-top: 2em;
+    margin-top: 3em;
     margin-left: 1em;
-    margin-right: 2em;
+    margin-right: 3em;
   }
 
   ul {
@@ -121,13 +121,12 @@
   }
 
   &:hover {
-    background: rgba(0,0,0,.10);
     @media(min-width: 600px) {
       background: none;
     }
   }
 
-  a {
+  .unstyled-list a {
     color: $white;
     text-decoration: none;
     flex-basis: 100%;
@@ -135,10 +134,12 @@
     align-items: center;
     justify-content: center;
     @media(min-width: 600px) {
+      display: inline;
       justify-content: flex-end;
+      // background-color: red;
+      // border: solid 1px black;
 
       &:hover {
-        display: inline;
         color: $accent;
       }
     }
@@ -196,4 +197,9 @@
   &::before {
     opacity: 0;
   }
+}
+
+//************- Styling for Home anchor areas -************//
+.blog, .contact, .work a {
+  text-decoration: none;
 }

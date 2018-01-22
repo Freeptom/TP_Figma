@@ -1,33 +1,31 @@
-@font-face {
-  font-family: "YoungSerif";
-  src: url("../../fonts/YoungSerif-Regular.eot");
-  src: url("../../fonts/YoungSerif-Regular.woff") format("woff"), url("../../fonts/YoungSerif-Regular.otf") format("opentype"),;
-}
-@font-face {
-  font-family: "Lovelo Black";
-  src: url("../../fonts/lovelo/Lovelo Black.otf");
-}
 //************-Defining Font Faces-************//
+
+h1 {
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 700;
+  letter-spacing: .5px;
+  color: $black;
+}
+
 
 
 a,
-h1,
-h2,
 p {
-
   font-family: 'Open Sans', sans-serif;
   letter-spacing: .5px;
   color: $accent;
 }
 
-
+h2.logo {
+  font-family: 'Bitter', serif;
+}
 
 h3,
 h4,
 h5,
 h6 {
-
-  font-family: 'Lovelo Black';
+  font-family: 'Bitter', serif;
+  font-weight: 400;
   letter-spacing: 1px;
   color: $text-base;
 }
@@ -36,25 +34,19 @@ h6 {
 h1.header__title {
 
 
-  text-align: center;
+  text-align: left;
   font-size: 2rem;
   @media screen and (min-width: 600px) {
     & {
-      font-size: 4rem;
+      font-size: 5rem;
     }
   }
 }
 
 h3.header__subtitle {
-
-
-  text-shadow: -2px 2px 0px #00e6e6;
-
-  text-align: center;
+  text-align: left;
   grid-column: 1;
-  text-transform: uppercase;
   font-size: .75rem;
-  font-weight: 300;
   @media screen and (min-width: 600px) {
     & {
       font-size: 1.75rem;
@@ -64,7 +56,6 @@ h3.header__subtitle {
 //************-Items-************//
 
 .item__title {
-    text-shadow: -2px 2px 0px #00e6e6;
   font-size: 1.5rem;
   @media screen and (min-width: 600px) {
     & {
@@ -81,9 +72,8 @@ h2.logo {
 }
 
 p {
-  font-family: 'YoungSerif';
   line-height: 1.5;
-  font-size: 1rem;
+  font-size: .90rem;
   margin-bottom: 0.75em;
   @media screen and (min-width: 600px) {
     & {
