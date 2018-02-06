@@ -1,84 +1,3 @@
-// .nav-container {
-//   background: rgba(255,255,255,0.8);
-//   display: none;
-//   position: fixed;
-//   height:10%;
-//   width: 100%;
-//   @media screen and (min-width: 600px) {
-//     display: block;
-//   }
-// }
-//
-// .main-nav {
-//   //************- Full Screen Menu -************//
-//   // top: 35px;
-//   position: fixed;
-//   right: 0;
-//   left: 1;
-//
-//   .unstyled-list ul {
-//     padding: 0;
-//     margin: 0;
-//   }
-//
-//   .unstyled-list li {
-//     display: inline-block;
-//     margin: 0 1em;
-//     list-style: none;
-//   }
-//
-//   .unstyled-list a {
-//     text-decoration: none;
-//     color: $accent;
-//   }
-//   //************- Burger Menu Open -************//
-//   &.is-open {
-//     overflow: hidden;
-//     position: fixed;
-//     visibility: visible;
-//     display: block;
-//     background: $accent;
-//     left: 0;
-//     top:0;
-//     padding: 0;
-//     height: 100vh;
-//     border-left: 3px solid $white;
-//     transition: all ease-in-out 250ms;
-//
-//     ul {
-//       padding-top: 10%;
-//       width: 100%;
-//       text-align: center;
-//     }
-//
-//     .unstyled-list li {
-//       overflow: hidden;
-//       display: block;
-//       text-align: center;
-//       padding-top: 20%;
-//       margin: 0;
-//
-//       a {
-//         color: $white;
-//
-//         &:hover {
-//           text-decoration: underline;
-//         }
-//
-//         &:active,
-//         &:focus {
-//           color: $secondary;
-//         }
-//       }
-//     }
-//   }
-//   @media screen and (min-width: 600px) {
-//     display: block;
-//   }
-// }
-
-
-
 .main-nav {
   transition: all ease-in-out 250ms;
   background: $accent;
@@ -92,8 +11,8 @@
     left: 0;
     flex: auto;
     margin-top: 3em;
-    margin-left: 1em;
-    margin-right: 3em;
+    margin-left: .5em;
+    margin-right: 4em;
   }
 
   ul {

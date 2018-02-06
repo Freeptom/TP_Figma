@@ -25,7 +25,7 @@
       grid-template-areas:
       "main-nav main-nav main-nav"
       "header header header"
-      "blog blog contact"
+      "blog contact contact"
       "work work work";
     }
   }
@@ -36,14 +36,14 @@
   text-align: center;
   grid-area: header;
   // background: $comp-accent;
-  background-image: url("https://images.pexels.com/photos/131683/pexels-photo-131683.jpeg?w=1260&h=750&dpr=2&auto=compress&cs=tinysrgb");
+background-image: url("../../img/pexels-photo-273238.jpeg");
   background-size: cover;
   background-repeat: no-repeat;
   padding: 15% 0;
   height: 30vh;
   @media screen and (min-width: 600px) {
     & {
-      height: 100vh;
+      height: 120vh;
     }
   }
 }
@@ -78,7 +78,7 @@
 
 .item {
   min-height: 500px;
-  padding: 4em 3em;
+  padding: 4em 10em;
 }
 
 .blog {
@@ -100,8 +100,15 @@
 
 .work {
   grid-area: work;
-  background-image: url("http://unsplash.it/800/600");
+ background-image: url("../../img/pexels-photo-273238.jpeg");
+object-fit: contain;
+  background-size: 100%;
+  background-repeat: no-repeat;
   background-color: #B8B8B8;
   background-blend-mode: multiply;
-  background-size: cover;
+  @media screen and (min-width: 500px) {
+    & {
+      height: 105vh;
+    }
+}
 }

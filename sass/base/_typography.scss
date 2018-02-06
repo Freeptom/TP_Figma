@@ -17,14 +17,14 @@ p {
 }
 
 h2.logo {
-  font-family: 'Bitter', serif;
+  font-family: 'Open Sans', serif;
 }
 
 h3,
 h4,
 h5,
 h6 {
-  font-family: 'Bitter', serif;
+  font-family: 'Open Sans', serif;
   font-weight: 400;
   letter-spacing: 1px;
   color: $text-base;
@@ -33,8 +33,6 @@ h6 {
 
 h1.header__title {
 
-
-  text-align: left;
   font-size: 2rem;
   @media screen and (min-width: 600px) {
     & {
@@ -44,7 +42,7 @@ h1.header__title {
 }
 
 h3.header__subtitle {
-  text-align: left;
+  text-align: right;
   grid-column: 1;
   font-size: .75rem;
   @media screen and (min-width: 600px) {
