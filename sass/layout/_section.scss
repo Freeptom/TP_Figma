@@ -32,6 +32,10 @@
 }
 
 
+
+
+
+
 .header {
   text-align: center;
   grid-area: header;
@@ -40,7 +44,7 @@ background-image: url("../../img/pexels-photo-273238.jpeg");
   background-size: cover;
   background-repeat: no-repeat;
   padding: 15% 0;
-  height: 30vh;
+  height: 60vh;
   @media screen and (min-width: 600px) {
     & {
       height: 120vh;
@@ -78,14 +82,19 @@ background-image: url("../../img/pexels-photo-273238.jpeg");
 
 .item {
   min-height: 500px;
-  padding: 4em 10em;
+  padding: 2em 2em;
+  @media screen and (min-width: 500px) {
+    & {
+      padding: 10em 2em;
+    }
+}
 }
 
 .blog {
   grid-area: blog;
   background-image: url("https://images.unsplash.com/photo-1504542227056-9178533a9175?auto=format&fit=crop&w=1567&q=80/");
   background-size: cover;
-  height: 30vh;
+  height: 60vh;
   @media screen and (min-width: 500px) {
     & {
       height: 100vh;
@@ -106,9 +115,43 @@ object-fit: contain;
   background-repeat: no-repeat;
   background-color: #B8B8B8;
   background-blend-mode: multiply;
+
   @media screen and (min-width: 500px) {
     & {
-      height: 105vh;
+      height: 60vh;
     }
 }
+}
+
+
+//*******---------BLOG PAGE---------*******//
+
+
+.blog-page {
+  width:100vw;
+  display:grid;
+  grid-template-areas:
+  "blog-post";
+
+  @media screen and (min-width: 500px) {
+    & {
+      grid-template-columns: 2fr auto;
+      grid-template-areas:
+      "main-nav main-nav"
+      "header header"
+      "blog contact"
+      "work work";
+    }
+  }
+  @media only screen and (min-width: 600px) {
+    & {
+
+      grid-template-columns: auto auto auto;
+      grid-template-areas:
+      "main-nav main-nav main-nav"
+      "header header header"
+      "blog contact contact"
+      "work work work";
+    }
+  }
 }
