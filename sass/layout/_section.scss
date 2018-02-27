@@ -40,13 +40,16 @@
   text-align: center;
   grid-area: header;
   // background: $comp-accent;
-background-image: url("../../img/pexels-photo-273238.jpeg");
-  background-size: cover;
-  background-repeat: no-repeat;
+// background-image: url("../../img/pexels-photo-273238.jpeg");
+background-image: url("../../img/bg/minimal-hipster-pattern/647.jpg");
+background-size: 120%;
+background-position: center;
+// background-repeat: repeat;
   padding: 15% 0;
   height: 60vh;
   @media screen and (min-width: 600px) {
     & {
+      padding: 10% 0;
       height: 120vh;
     }
   }
@@ -68,13 +71,16 @@ background-image: url("../../img/pexels-photo-273238.jpeg");
   @media screen and (min-width: 500px) {
     & {
       display: block;
-      grid-area: logo;
+      // grid-area: logo;
       position: fixed;
-      /* Set the navbar to fixed position */
       top: 3%;
       padding: 0.75em;
       left: 2%;
       border: 3px solid $accent;
+      // background-image: url('../../img/bg/geometry2.png');
+      // background-repeat: no-repeat;
+      // background-size: cover;
+
     }
   }
 }

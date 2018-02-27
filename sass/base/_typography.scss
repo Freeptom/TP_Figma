@@ -11,7 +11,7 @@ a,
 p {
   font-family: 'Open Sans', sans-serif;
   letter-spacing: .5px;
-  color: $accent;
+
 }
 
 h2.logo {
@@ -25,21 +25,32 @@ h6 {
   font-family: 'Open Sans', serif;
   font-weight: 400;
   letter-spacing: 1px;
-  color: $text-base;
+  color: $black;
 }
 //************-Header-************//
 
 h1.header__title {
-
+  background-color: $accent;
+  padding: 0 1em 0 1em;
+  // display: inline-block;
   font-size: 2rem;
+  @media screen and (min-width: 300px) {
+    & {
+      font-size: 2.5rem;
+    }
+  }
   @media screen and (min-width: 600px) {
     & {
-      font-size: 5rem;
+      font-size: 5.5rem;
     }
   }
 }
 
 h3.header__subtitle {
+  background-color: $black;
+  color: $white;
+  margin:auto;
+  padding: .4em 1em .4em 1em;
   text-align: right;
   grid-column: 1;
   font-size: .75rem;
@@ -52,6 +63,8 @@ h3.header__subtitle {
 //************-Items-************//
 
 .item__title {
+  background-color: $accent;
+  padding: 0 .5em 1em 1em;
   font-size: 1.5rem;
   @media screen and (min-width: 600px) {
     & {
@@ -63,11 +76,20 @@ h3.header__subtitle {
 
 h2.logo {
   color: $accent;
-  font-size: 1.5rem;
+  font-size: .5rem;
   font-weight: 400;
+  @media screen and (min-width: 600px) {
+    & {
+      font-size: 2rem;
+    }
+}
 }
 
 p {
+  background-color: $black;
+  color: $white;
+  margin:auto;
+  padding: 1em 1em 1em 1em;
   line-height: 1.5;
   font-size: .90rem;
   margin-bottom: 0.75em;

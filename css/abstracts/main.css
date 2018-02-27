@@ -33,8 +33,7 @@ h1 {
 a,
 p {
   font-family: 'Open Sans', sans-serif;
-  letter-spacing: .5px;
-  color: #FB6B21; }
+  letter-spacing: .5px; }
 
 h2.logo {
   font-family: 'Open Sans', serif; }
@@ -46,15 +45,24 @@ h6 {
   font-family: 'Open Sans', serif;
   font-weight: 400;
   letter-spacing: 1px;
-  color: #104AB6; }
+  color: #343A40; }
 
 h1.header__title {
+  background-color: #2EB5AB;
+  padding: 0 1em 0 1em;
   font-size: 2rem; }
+  @media screen and (min-width: 300px) {
+    h1.header__title {
+      font-size: 2.5rem; } }
   @media screen and (min-width: 600px) {
     h1.header__title {
-      font-size: 5rem; } }
+      font-size: 5.5rem; } }
 
 h3.header__subtitle {
+  background-color: #343A40;
+  color: #FFFFFF;
+  margin: auto;
+  padding: .4em 1em .4em 1em;
   text-align: right;
   grid-column: 1;
   font-size: .75rem; }
@@ -63,17 +71,26 @@ h3.header__subtitle {
       font-size: 1.75rem; } }
 
 .item__title {
+  background-color: #2EB5AB;
+  padding: 0 .5em 1em 1em;
   font-size: 1.5rem; }
   @media screen and (min-width: 600px) {
     .item__title {
       font-size: 3rem; } }
 
 h2.logo {
-  color: #FB6B21;
-  font-size: 1.5rem;
+  color: #2EB5AB;
+  font-size: .5rem;
   font-weight: 400; }
+  @media screen and (min-width: 600px) {
+    h2.logo {
+      font-size: 2rem; } }
 
 p {
+  background-color: #343A40;
+  color: #FFFFFF;
+  margin: auto;
+  padding: 1em 1em 1em 1em;
   line-height: 1.5;
   font-size: .90rem;
   margin-bottom: 0.75em; }
@@ -104,13 +121,14 @@ a {
 .header {
   text-align: center;
   grid-area: header;
-  background-image: url("../../img/pexels-photo-273238.jpeg");
-  background-size: cover;
-  background-repeat: no-repeat;
+  background-image: url("../../img/bg/minimal-hipster-pattern/647.jpg");
+  background-size: 120%;
+  background-position: center;
   padding: 15% 0;
   height: 60vh; }
   @media screen and (min-width: 600px) {
     .header {
+      padding: 10% 0;
       height: 120vh; } }
 
 .header__container {
@@ -126,13 +144,11 @@ a {
   @media screen and (min-width: 500px) {
     .logo {
       display: block;
-      grid-area: logo;
       position: fixed;
-      /* Set the navbar to fixed position */
       top: 3%;
       padding: 0.75em;
       left: 2%;
-      border: 3px solid #FB6B21; } }
+      border: 3px solid #2EB5AB; } }
 
 .item {
   min-height: 500px;
@@ -185,7 +201,8 @@ a {
   -webkit-transition: all ease-in-out 250ms;
   -o-transition: all ease-in-out 250ms;
   transition: all ease-in-out 250ms;
-  background: #FB6B21;
+  opacity: 0;
+  background: #2EB5AB;
   position: absolute;
   top: 0;
   right: 0;
@@ -193,6 +210,7 @@ a {
   overflow: hidden; }
   @media (min-width: 600px) {
     .main-nav {
+      opacity: 1;
       background: none;
       left: 0;
       -webkit-box-flex: 1;
@@ -200,7 +218,7 @@ a {
       -ms-flex: auto;
       flex: auto;
       margin-top: 3em;
-      margin-left: .5em;
+      margin-left: 10em;
       margin-right: 4em; } }
   .main-nav ul {
     border-left: #FFFFFF solid 2px;
@@ -245,7 +263,14 @@ a {
     .main-nav:hover {
       background: none; } }
   .main-nav .unstyled-list a {
+    -webkit-transition: all ease-in-out 250ms;
+    -o-transition: all ease-in-out 250ms;
+    transition: all ease-in-out 250ms;
+    opacity: 1;
+    background-color: #343A40;
     color: #FFFFFF;
+    margin: auto;
+    padding: .4em 1em .4em 1em;
     text-decoration: none;
     -webkit-flex-basis: 100%;
     -ms-flex-preferred-size: 100%;
@@ -270,10 +295,11 @@ a {
         -ms-flex-pack: end;
         justify-content: flex-end; }
         .main-nav .unstyled-list a:hover {
-          color: #FB6B21; } }
+          color: #2EB5AB; } }
   .main-nav.is-open {
     position: fixed;
-    left: 40%; }
+    left: 40%;
+    opacity: .98; }
 
 .nav-toggle {
   cursor: pointer;
@@ -294,7 +320,7 @@ a {
   height: 3px;
   position: absolute;
   border-radius: 5px;
-  background-color: #FFFFFF;
+  background-color: #2EB5AB;
   -webkit-transition: all ease-in-out 250ms;
   -o-transition: all ease-in-out 250ms;
   transition: all ease-in-out 250ms; }
@@ -311,16 +337,19 @@ a {
 .hamburger::after {
   -webkit-transform: translateY(6px);
   -ms-transform: translateY(6px);
-  transform: translateY(6px); }
+  transform: translateY(6px);
+  background-color: #2EB5AB; }
 
 .hamburger.is-open {
   -webkit-transform: rotate(45deg);
   -ms-transform: rotate(45deg);
-  transform: rotate(45deg); }
+  transform: rotate(45deg);
+  background: #FFFFFF; }
   .hamburger.is-open::after {
     -webkit-transform: rotate(-90deg);
     -ms-transform: rotate(-90deg);
-    transform: rotate(-90deg); }
+    transform: rotate(-90deg);
+    background: #FFFFFF; }
   .hamburger.is-open::before {
     opacity: 0; }
 

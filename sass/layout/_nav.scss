@@ -1,5 +1,6 @@
 .main-nav {
   transition: all ease-in-out 250ms;
+  opacity: 0;
   background: $accent;
   position: absolute;
   top: 0;
@@ -7,11 +8,12 @@
   left: 100%;
   overflow: hidden;
   @media(min-width: 600px) {
+    opacity: 1;
     background: none;
     left: 0;
     flex: auto;
     margin-top: 3em;
-    margin-left: .5em;
+    margin-left: 10em;
     margin-right: 4em;
   }
 
@@ -25,6 +27,8 @@
       border: none;
       flex-direction: row;
       height: auto;
+
+
     }
   }
 
@@ -46,17 +50,21 @@
   }
 
   .unstyled-list a {
+    transition: all ease-in-out 250ms;
+    opacity: 1;
+    background-color: $black;
     color: $white;
+    margin:auto;
+    padding: .4em 1em .4em 1em;
     text-decoration: none;
     flex-basis: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
+
     @media(min-width: 600px) {
       display: inline;
       justify-content: flex-end;
-      // background-color: red;
-      // border: solid 1px black;
 
       &:hover {
         color: $accent;
@@ -67,6 +75,7 @@
   &.is-open {
     position: fixed;
     left: 40%;
+    opacity: .98;
   }
 }
 //************- Burger Menu Styling -************//
@@ -86,6 +95,7 @@
 .hamburger,
 .hamburger::after,
 .hamburger::before {
+
   &:focus {
     background-color: $secondary;
   }
@@ -94,7 +104,7 @@
   height: 3px;
   position: absolute;
   border-radius: 5px;
-  background-color: $white;
+  background-color: $accent;
   transition: all ease-in-out 250ms;
 }
 
@@ -104,13 +114,15 @@
 
 .hamburger::after {
   transform: translateY(6px);
+  background-color: $accent;
 }
 
 .hamburger.is-open {
   transform: rotate(45deg);
-
+  background: $white;
   &::after {
     transform: rotate(-90deg);
+    background: $white;
   }
 
   &::before {
