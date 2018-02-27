@@ -34,7 +34,8 @@ h1.header__title {
   padding: 0 1em 0 1em;
   // display: inline-block;
   font-size: 2rem;
-  @media screen and (min-width: 300px) {
+
+  @media screen and (min-width: 500px) {
     & {
       font-size: 2.5rem;
     }
@@ -64,7 +65,7 @@ h3.header__subtitle {
 
 .item__title {
   background-color: $accent;
-  padding: 0 .5em 1em 1em;
+  padding: .2em .2em .5em .5em;
   font-size: 1.5rem;
   @media screen and (min-width: 600px) {
     & {
