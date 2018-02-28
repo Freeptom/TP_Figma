@@ -33,18 +33,12 @@
 
 
 
-
-
-
 .header {
   text-align: center;
   grid-area: header;
-  // background: $comp-accent;
-// background-image: url("../../img/pexels-photo-273238.jpeg");
 background-image: url("../../img/bg/minimal-hipster-pattern/647.jpg");
 background-size: 120%;
 background-position: center;
-// background-repeat: repeat;
   padding: 15% 0;
   height: 60vh;
   @media screen and (min-width: 600px) {
@@ -142,19 +136,21 @@ object-fit: contain;
 
 
 .blog-page {
-  width:100vw;
+  width: 100vw;
   display:grid;
   grid-template-areas:
-  "blog-post";
+  "main-nav"
+  "blog-item";
+  background-image: url("../../img/bg/minimal-hipster-pattern/647.jpg");
+  background-size: 120%;
+  background-position: center;
 
   @media screen and (min-width: 500px) {
     & {
       grid-template-columns: 2fr auto;
       grid-template-areas:
       "main-nav main-nav"
-      "header header"
-      "blog contact"
-      "work work";
+      "blog-item blog-item";
     }
   }
   @media only screen and (min-width: 600px) {
@@ -163,9 +159,32 @@ object-fit: contain;
       grid-template-columns: auto auto auto;
       grid-template-areas:
       "main-nav main-nav main-nav"
-      "header header header"
-      "blog contact contact"
-      "work work work";
+      "blog-item blog-item blog-item";
     }
   }
 }
+
+.blog-item {
+    grid-area: blog-item;
+    background-image: url("../../img/bg/minimal-hipster-pattern/647.jpg");
+    background-size: 120%;
+    background-position: center;
+      padding: 15% 0;
+      height: 60vh;
+      @media screen and (min-width: 600px) {
+        & {
+          padding: 10% 10%;
+          height: 120vh;
+        }
+      }
+  }
+
+  .blog__container {
+    display: block;
+    padding: 15px 40px 25px;
+    @media only screen and (min-width: 600px) {
+      & {
+        padding: 80px 40px 40px;
+      }
+    }
+  }

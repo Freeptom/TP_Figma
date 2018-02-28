@@ -108,15 +108,15 @@ a {
 .portfolio {
   width: 100vw;
   display: grid;
-  grid-template-areas: "header" "blog" "contact" "work"; }
+  grid-template-areas: "header" "blog" "contact" "work"; }
   @media screen and (min-width: 500px) {
     .portfolio {
       grid-template-columns: 2fr auto;
-      grid-template-areas: "main-nav main-nav" "header header" "blog contact" "work work"; } }
+      grid-template-areas: "main-nav main-nav" "header header" "blog contact" "work work"; } }
   @media only screen and (min-width: 600px) {
     .portfolio {
       grid-template-columns: auto auto auto;
-      grid-template-areas: "main-nav main-nav main-nav" "header header header" "blog contact contact" "work work work"; } }
+      grid-template-areas: "main-nav main-nav main-nav" "header header header" "blog contact contact" "work work work"; } }
 
 .header {
   text-align: center;
@@ -193,15 +193,37 @@ a {
 .blog-page {
   width: 100vw;
   display: grid;
-  grid-template-areas: "blog-post"; }
+  grid-template-areas: "main-nav" "blog-item";
+  background-image: url("../../img/bg/minimal-hipster-pattern/647.jpg");
+  background-size: 120%;
+  background-position: center; }
   @media screen and (min-width: 500px) {
     .blog-page {
       grid-template-columns: 2fr auto;
-      grid-template-areas: "main-nav main-nav" "header header" "blog contact" "work work"; } }
+      grid-template-areas: "main-nav main-nav" "blog-item blog-item"; } }
   @media only screen and (min-width: 600px) {
     .blog-page {
       grid-template-columns: auto auto auto;
-      grid-template-areas: "main-nav main-nav main-nav" "header header header" "blog contact contact" "work work work"; } }
+      grid-template-areas: "main-nav main-nav main-nav" "blog-item blog-item blog-item"; } }
+
+.blog-item {
+  grid-area: blog-item;
+  background-image: url("../../img/bg/minimal-hipster-pattern/647.jpg");
+  background-size: 120%;
+  background-position: center;
+  padding: 15% 0;
+  height: 60vh; }
+  @media screen and (min-width: 600px) {
+    .blog-item {
+      padding: 10% 10%;
+      height: 120vh; } }
+
+.blog__container {
+  display: block;
+  padding: 15px 40px 25px; }
+  @media only screen and (min-width: 600px) {
+    .blog__container {
+      padding: 80px 40px 40px; } }
 
 .main-nav {
   -webkit-transition: all ease-in-out 250ms;
@@ -220,7 +242,6 @@ a {
       background: none;
       left: 0;
       -webkit-box-flex: 1;
-      -webkit-flex: auto;
       -ms-flex: auto;
       flex: auto;
       margin-top: 3em;
@@ -229,15 +250,12 @@ a {
   .main-nav ul {
     border-left: #FFFFFF solid 2px;
     display: -webkit-box;
-    display: -webkit-flex;
     display: -ms-flexbox;
     display: flex;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
-    -webkit-flex-direction: column;
     -ms-flex-direction: column;
     flex-direction: column;
-    -webkit-justify-content: space-around;
     -ms-flex-pack: distribute;
     justify-content: space-around;
     height: 100vh; }
@@ -246,18 +264,15 @@ a {
         border: none;
         -webkit-box-orient: horizontal;
         -webkit-box-direction: normal;
-        -webkit-flex-direction: row;
         -ms-flex-direction: row;
         flex-direction: row;
         height: auto; } }
   .main-nav li {
     -webkit-box-flex: 1;
-    -webkit-flex: 1 1 auto;
     -ms-flex: 1 1 auto;
     flex: 1 1 auto;
     border-bottom: 1px solid rgba(0, 0, 0, 0.15);
     display: -webkit-box;
-    display: -webkit-flex;
     display: -ms-flexbox;
     display: flex; }
     @media (min-width: 600px) {
@@ -278,19 +293,15 @@ a {
     margin: auto;
     padding: .4em 1em .4em 1em;
     text-decoration: none;
-    -webkit-flex-basis: 100%;
     -ms-flex-preferred-size: 100%;
     flex-basis: 100%;
     display: -webkit-box;
-    display: -webkit-flex;
     display: -ms-flexbox;
     display: flex;
     -webkit-box-align: center;
-    -webkit-align-items: center;
     -ms-flex-align: center;
     align-items: center;
     -webkit-box-pack: center;
-    -webkit-justify-content: center;
     -ms-flex-pack: center;
     justify-content: center; }
     @media (min-width: 600px) {
@@ -298,7 +309,6 @@ a {
         background-color: #343A40;
         display: inline;
         -webkit-box-pack: end;
-        -webkit-justify-content: flex-end;
         -ms-flex-pack: end;
         justify-content: flex-end; }
         .main-nav .unstyled-list a:hover {
